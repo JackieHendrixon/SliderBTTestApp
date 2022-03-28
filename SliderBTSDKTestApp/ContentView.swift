@@ -6,83 +6,76 @@
 //
 
 import SwiftUI
-import CoreData
+import SliderBluetoothSDK
 
 struct ContentView: View {
-    @Environment(\.managedObjectContext) private var viewContext
+    private let sliderBT = SliderBluetoothSDK()
 
-    @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
-        animation: .default)
-    private var items: FetchedResults<Item>
+    @State private var instruction = ""
+    @State private var data = ""
 
     var body: some View {
         NavigationView {
-            List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.timestamp!, formatter: itemFormatter)")
-                    } label: {
-                        Text(item.timestamp!, formatter: itemFormatter)
-                    }
+            VStack(spacing:48) {
+
+                Button(action: {
+                    sliderBT.start()
+                }, label: {
+                    Text("Start scanning")
+                })
+                HStack(spacing: 24) {
+                    TextField("Instruction", text: $instruction)
+                        .frame(width: 120)
+                        .textFieldStyle(.roundedBorder)
+                        .keyboardType(.numbersAndPunctuation)
+                    TextField("Data", text: $data)
+                        .frame(width: 120)
+                        .textFieldStyle(.roundedBorder)
+                        .keyboardType(.numbersAndPunctuation)
+                    Button(action: {
+                        guard !instruction.isEmpty else { return }
+                        var sendData = Data()
+                        var dataUInt8 = UInt8(instruction)
+                        let byteData = Data(bytes: &dataUInt8,
+                                            count: 1)
+                        sendData.append(byteData)
+                        if !data.isEmpty {
+                            var dataInt16 = Int16(data)
+                            let byteData = Data(bytes: &dataInt16, count: 2)
+                            sendData.append(byteData)
+                        }
+                        sendData.forEach {
+                            print(String($0, radix: 2))
+                        }
+                        sliderBT.write(value: sendData)
+                    }, label: {
+                        Text("Send")
+                    })
                 }
-                .onDelete(perform: deleteItems)
-            }
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
-                }
-                ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
-                    }
-                }
-            }
-            Text("Select an item")
+                NavigationLink (
+                    "Test ChangePosition",
+                    destination: TestChangePosition(sliderBT: sliderBT)
+                )
+                NavigationLink (
+                    "Test Move",
+                    destination: TestMove(sliderBT: sliderBT)
+                )
+                Button(action: {
+                    sliderBT.disconnect()
+                }, label: {
+                    Text("Disconnect")
+                })
+                LoggerView()
+            }.buttonStyle(.bordered)
+                .navigationTitle("Slider BT Test App 🔬")
         }
-    }
-
-    private func addItem() {
-        withAnimation {
-            let newItem = Item(context: viewContext)
-            newItem.timestamp = Date()
-
-            do {
-                try viewContext.save()
-            } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nsError = error as NSError
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-            }
-        }
-    }
-
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            offsets.map { items[$0] }.forEach(viewContext.delete)
-
-            do {
-                try viewContext.save()
-            } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nsError = error as NSError
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-            }
-        }
+        .tint(.red)
+        .accentColor(.red)
     }
 }
 
-private let itemFormatter: DateFormatter = {
-    let formatter = DateFormatter()
-    formatter.dateStyle = .short
-    formatter.timeStyle = .medium
-    return formatter
-}()
-
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+        ContentView()
     }
 }

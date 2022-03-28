@@ -7,15 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		101734B227F25AEB00A7682A /* LoggerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101734B127F25AEB00A7682A /* LoggerView.swift */; };
+		101734B527F26A3400A7682A /* SliderBluetoothSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 101734B427F26A3400A7682A /* SliderBluetoothSDK */; };
 		1060B65C27D93EEA00EE4C37 /* SliderBTSDKTestAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1060B65B27D93EEA00EE4C37 /* SliderBTSDKTestAppApp.swift */; };
 		1060B65E27D93EEA00EE4C37 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1060B65D27D93EEA00EE4C37 /* ContentView.swift */; };
 		1060B66027D93EEE00EE4C37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1060B65F27D93EEE00EE4C37 /* Assets.xcassets */; };
 		1060B66327D93EEE00EE4C37 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1060B66227D93EEE00EE4C37 /* Preview Assets.xcassets */; };
-		1060B66527D93EEE00EE4C37 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1060B66427D93EEE00EE4C37 /* Persistence.swift */; };
-		1060B66827D93EEE00EE4C37 /* SliderBTSDKTestApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1060B66627D93EEE00EE4C37 /* SliderBTSDKTestApp.xcdatamodeld */; };
 		1060B67227D93EEF00EE4C37 /* SliderBTSDKTestAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1060B67127D93EEF00EE4C37 /* SliderBTSDKTestAppTests.swift */; };
 		1060B67C27D93EEF00EE4C37 /* SliderBTSDKTestAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1060B67B27D93EEF00EE4C37 /* SliderBTSDKTestAppUITests.swift */; };
 		1060B67E27D93EEF00EE4C37 /* SliderBTSDKTestAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1060B67D27D93EEF00EE4C37 /* SliderBTSDKTestAppUITestsLaunchTests.swift */; };
+		10A7441D27E4956700C57F42 /* TestChangePosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A7441C27E4956700C57F42 /* TestChangePosition.swift */; };
+		10A7441F27E49D7300C57F42 /* TestMove.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A7441E27E49D7300C57F42 /* TestMove.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,18 +38,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		101734B127F25AEB00A7682A /* LoggerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggerView.swift; sourceTree = "<group>"; };
 		1060B65827D93EEA00EE4C37 /* SliderBTSDKTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SliderBTSDKTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1060B65B27D93EEA00EE4C37 /* SliderBTSDKTestAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderBTSDKTestAppApp.swift; sourceTree = "<group>"; };
 		1060B65D27D93EEA00EE4C37 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1060B65F27D93EEE00EE4C37 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1060B66227D93EEE00EE4C37 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		1060B66427D93EEE00EE4C37 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
-		1060B66727D93EEE00EE4C37 /* SliderBTSDKTestApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SliderBTSDKTestApp.xcdatamodel; sourceTree = "<group>"; };
 		1060B66D27D93EEF00EE4C37 /* SliderBTSDKTestAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SliderBTSDKTestAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1060B67127D93EEF00EE4C37 /* SliderBTSDKTestAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderBTSDKTestAppTests.swift; sourceTree = "<group>"; };
 		1060B67727D93EEF00EE4C37 /* SliderBTSDKTestAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SliderBTSDKTestAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1060B67B27D93EEF00EE4C37 /* SliderBTSDKTestAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderBTSDKTestAppUITests.swift; sourceTree = "<group>"; };
 		1060B67D27D93EEF00EE4C37 /* SliderBTSDKTestAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderBTSDKTestAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		10A7441C27E4956700C57F42 /* TestChangePosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestChangePosition.swift; sourceTree = "<group>"; };
+		10A7441E27E49D7300C57F42 /* TestMove.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestMove.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				101734B527F26A3400A7682A /* SliderBluetoothSDK in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,10 +82,12 @@
 		1060B64F27D93EE900EE4C37 = {
 			isa = PBXGroup;
 			children = (
+				1060B68A27D9411200EE4C37 /* Packages */,
 				1060B65A27D93EEA00EE4C37 /* SliderBTSDKTestApp */,
 				1060B67027D93EEF00EE4C37 /* SliderBTSDKTestAppTests */,
 				1060B67A27D93EEF00EE4C37 /* SliderBTSDKTestAppUITests */,
 				1060B65927D93EEA00EE4C37 /* Products */,
+				1060B68D27D941EE00EE4C37 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,9 +106,10 @@
 			children = (
 				1060B65B27D93EEA00EE4C37 /* SliderBTSDKTestAppApp.swift */,
 				1060B65D27D93EEA00EE4C37 /* ContentView.swift */,
+				101734B127F25AEB00A7682A /* LoggerView.swift */,
+				10A7441C27E4956700C57F42 /* TestChangePosition.swift */,
+				10A7441E27E49D7300C57F42 /* TestMove.swift */,
 				1060B65F27D93EEE00EE4C37 /* Assets.xcassets */,
-				1060B66427D93EEE00EE4C37 /* Persistence.swift */,
-				1060B66627D93EEE00EE4C37 /* SliderBTSDKTestApp.xcdatamodeld */,
 				1060B66127D93EEE00EE4C37 /* Preview Content */,
 			);
 			path = SliderBTSDKTestApp;
@@ -133,6 +140,20 @@
 			path = SliderBTSDKTestAppUITests;
 			sourceTree = "<group>";
 		};
+		1060B68A27D9411200EE4C37 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
+		1060B68D27D941EE00EE4C37 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -149,6 +170,9 @@
 			dependencies = (
 			);
 			name = SliderBTSDKTestApp;
+			packageProductDependencies = (
+				101734B427F26A3400A7682A /* SliderBluetoothSDK */,
+			);
 			productName = SliderBTSDKTestApp;
 			productReference = 1060B65827D93EEA00EE4C37 /* SliderBTSDKTestApp.app */;
 			productType = "com.apple.product-type.application";
@@ -221,6 +245,9 @@
 				Base,
 			);
 			mainGroup = 1060B64F27D93EE900EE4C37;
+			packageReferences = (
+				101734B327F26A3400A7682A /* XCRemoteSwiftPackageReference "SliderBluetoothSDK" */,
+			);
 			productRefGroup = 1060B65927D93EEA00EE4C37 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -263,10 +290,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1060B66527D93EEE00EE4C37 /* Persistence.swift in Sources */,
 				1060B65E27D93EEA00EE4C37 /* ContentView.swift in Sources */,
 				1060B65C27D93EEA00EE4C37 /* SliderBTSDKTestAppApp.swift in Sources */,
-				1060B66827D93EEE00EE4C37 /* SliderBTSDKTestApp.xcdatamodeld in Sources */,
+				10A7441F27E49D7300C57F42 /* TestMove.swift in Sources */,
+				10A7441D27E4956700C57F42 /* TestChangePosition.swift in Sources */,
+				101734B227F25AEB00A7682A /* LoggerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,6 +458,7 @@
 				DEVELOPMENT_TEAM = RDUN59BZKF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Just don't ask questions.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -459,6 +488,7 @@
 				DEVELOPMENT_TEAM = RDUN59BZKF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Just don't ask questions.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -594,18 +624,24 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCVersionGroup section */
-		1060B66627D93EEE00EE4C37 /* SliderBTSDKTestApp.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				1060B66727D93EEE00EE4C37 /* SliderBTSDKTestApp.xcdatamodel */,
-			);
-			currentVersion = 1060B66727D93EEE00EE4C37 /* SliderBTSDKTestApp.xcdatamodel */;
-			path = SliderBTSDKTestApp.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
+/* Begin XCRemoteSwiftPackageReference section */
+		101734B327F26A3400A7682A /* XCRemoteSwiftPackageReference "SliderBluetoothSDK" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/JackieHendrixon/SliderBluetoothSDK";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
 		};
-/* End XCVersionGroup section */
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		101734B427F26A3400A7682A /* SliderBluetoothSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 101734B327F26A3400A7682A /* XCRemoteSwiftPackageReference "SliderBluetoothSDK" */;
+			productName = SliderBluetoothSDK;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1060B65027D93EE900EE4C37 /* Project object */;
 }
